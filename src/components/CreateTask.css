@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.create-task-container {
+    width: 600px;
+    margin: 30px 0 0 350px;
+    font-size: 18px;
+    color: #333;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+.heading {
+    text-align: center;
+    padding: 10px;
+}
+
+.heading-divider {
+    border-top: 2px solid #000;
+    margin: 0;
+}
+
+.content {
+    min-height: 143px;
+    padding: 10px;
+    font-size: 18px;
+    margin: 0px 0 0 100px;
+}
+
+.add-button {
+    text-decoration: none;
+    margin: 10px 0 10px 100px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}

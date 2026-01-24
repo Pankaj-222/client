@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hr {
+    color: #000;
+    background: #000;
+}
+
+.task-details-container {
+    width: 600px;
+    margin: 30px 0 0 350px;
+    font-size: 18px;
+    color: #333;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+.content {
+    margin: 0 0 0 100px;
+}
+
+span {
+    margin: 0 0 0 40px;
+}
+
+.button {
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.heading {
+    text-align: center;
+    padding: 10px;
+}
+
+.heading-divider {
+    border-top: 2px solid #000;
+    margin: 0;
+}

@@ -1,0 +1,65 @@
+import React from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate, Link, useParams } from 'react-router-dom'
+import axios from 'axios'
+import "./TaskDetails.css"
+
+const TaskDetails = () => {
+  const [name, setName] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState("")
+  const navigate = useNavigate()
+  const { id } = useParams()
+
+  useEffect(() => {
+    setTimeout(() => {
+      axios.get(`http://localhost:7000/api/task/${id}`)
+        .then(response => {
+          setName(response.data)
+          setError("")
+          setLoading(false)
+        })
+        .catch((error) => {
+          setError(`task not found: ${error.message}`)
+          setLoading(false)
+        })
+    }, [1000])
+  }, [id])
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:7000/api/delete/${id}`)
+      navigate('/')
+    } catch (error) {
+      setError(`Error occured while deleteing task: ${error.message}`)
+    }
+  }
+
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString()
+  }
+
+  return (
+    <div className='task-details-container'>
+      
+      <h2 className='heading'>Students Details</h2>
+      <div className="heading-divider"></div><br />
+      <div className='content'>
+      {error && <p>{error}</p>}
+      <p>Name - {loading && <span>loading...</span>} {name.name}</p>
+      <p>Email - {loading && <span>loading...</span>} {name.email}</p>
+      <p>Phone - {loading && <span>loading...</span>} {name.phone}</p>
+      <p>Students Details Created at - {loading && <span>loading...</span>}{formatDate(name.createdAt)}</p>
+      <p>Students Details Updated at - {loading && <span>loading...</span>}{formatDate(name.updatedAt)}</p>
+      </div>
+      <span>
+        <button onClick={handleDelete} className='button'>Remove Students Details</button>
+        <Link to={`/update-task/${id}`}>
+          <button className='button'>Update Students Details</button>
+        </Link>
+      </span>
+    </div>
+  )
+}
+
+export default TaskDetails;
