@@ -15,7 +15,7 @@ const AllTasks = () => {
 
     setTimeout(() => {
       axios
-        .get("http://localhost:7000/api/tasks")
+        .get("https://school-erp-backend-7259.onrender.com/api/tasks")
         .then((response) => {
           setTasks(response.data);
           setLoading(false);

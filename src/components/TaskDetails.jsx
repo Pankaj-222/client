@@ -13,7 +13,7 @@ const TaskDetails = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      axios.get(`http://localhost:7000/api/task/${id}`)
+      axios.get(`https://school-erp-backend-7259.onrender.com/api/task/${id}`)
         .then(response => {
           setName(response.data)
           setError("")
@@ -28,7 +28,7 @@ const TaskDetails = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:7000/api/delete/${id}`)
+      await axios.delete(`https://school-erp-backend-7259.onrender.com/api/delete/${id}`)
       navigate('/')
     } catch (error) {
       setError(`Error occured while deleteing task: ${error.message}`)
