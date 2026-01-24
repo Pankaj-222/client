@@ -15,7 +15,7 @@ const UpdateTask = () => {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const response = await axios.get(`http://localhost:7000/api/task/${id}`);
+        const response = await axios.get(`https://school-erp-backend-7259.onrender.com/api/task/${id}`);
         setName(response.data.name)
         setEmail(response.data.email)
         setPhone(response.data.phone)
@@ -30,7 +30,7 @@ const UpdateTask = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.put(`http://localhost:7000/api/edit/${id}`, { name, email, phone })
+      await axios.put(`https://school-erp-backend-7259.onrender.com/api/edit/${id}`, { name, email, phone })
       setMessage("Students Details updated successfully...")
       setError("")
       setName("")

@@ -15,7 +15,7 @@ const CreateTasks = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:7000/api/create', { name, email, phone })
+      await axios.post('https://school-erp-backend-7259.onrender.com/api/create', { name, email, phone })
       setMessage("Students Details Added successfully")
       setError('')
       setName('')
