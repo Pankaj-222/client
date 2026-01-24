@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import { Routes, Route } from 'react-router-dom'
-import AllTask from './components/Alltasks.jsx'
+import AllTasks from './components/AllTasks.jsx'
 import CreateTask from './components/CreateTask.jsx'
 import UpdateTask from './components/UpdateTask.jsx'
 import TaskDetails from './components/TaskDetails.jsx'
@@ -23,7 +23,7 @@ const App = () => {
       <div className={`container ${theme}`}>
         <Navbar theme={theme} setTheme={setTheme}/>
         <Routes>
-          <Route path="/" element={<AllTask />} />
+          <Route path="/" element={<AllTasks />} />
           <Route path="/create-task" element={<CreateTask />} />
           <Route path="/update-task/:id" element={<UpdateTask />} />
           <Route path="/task-details/:id" element={<TaskDetails />} />
