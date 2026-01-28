@@ -19,9 +19,10 @@ const Footer = () => {
             Quick Links
           </h2>
           <ul className="quick-links">
-            <li><a href="/about" >About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/" >Services</a></li>
+            <li><a href="/">Privacy Policy</a></li>
+            <li><a href="/">Term and Conditions</a></li>
           </ul>
         </div>
         <div>

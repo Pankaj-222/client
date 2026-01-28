@@ -22,9 +22,9 @@ const Navbar = ({ theme, setTheme }) => {
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <a href="/">Home</a>
-        <a href="/profile">Profile</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/">Profile</a>
+        <a href="/">About</a>
+        <a href="/">Contact</a>
       </div>
 
       <div className="nav-right">
