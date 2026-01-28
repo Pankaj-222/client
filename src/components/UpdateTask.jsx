@@ -45,7 +45,7 @@ const UpdateTask = () => {
   return (
     <div className='update-task-container'>
       <h2 className='heading'>Update Students Details</h2>
-      <div className="heading-divider"></div><br />
+      <div className="update-task-heading-divider"></div><br />
       <div className='content'>
       {message && <p>{message}</p>}
       {error && <p>{error}</p>}

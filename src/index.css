@@ -1,16 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-.container {
-    width: 100vw;
-    min-height: 100vh;
-    background: #ced8ff;
+:root {
+  --bg: #dbe3ff;
+  --card-bg: #ffffff;
+  --text: #111;
+  --border: #000;
+  --primary: #3b82f6;     /* blue */
+  --primary-hover: #2563eb;
+  --success: #22c55e;     /* green */
+  --success-hover: #16a34a;
+  --muted: #64748b;
 }
 
 .container.dark {
-    background: #222;
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #f8fafc;
+  --border: #334155;
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+  --success: #4ade80;
+  --success-hover: #22c55e;
+  --muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
 }

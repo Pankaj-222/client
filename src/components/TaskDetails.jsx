@@ -43,7 +43,7 @@ const TaskDetails = () => {
     <div className='task-details-container'>
       
       <h2 className='heading'>Students Details</h2>
-      <div className="heading-divider"></div><br />
+      <div className="task-details-heading-divider"></div><br />
       <div className='content'>
       {error && <p>{error}</p>}
       <p>Name - {loading && <span>loading...</span>} {name.name}</p>
@@ -52,12 +52,18 @@ const TaskDetails = () => {
       <p>Students Details Created at - {loading && <span>loading...</span>}{formatDate(name.createdAt)}</p>
       <p>Students Details Updated at - {loading && <span>loading...</span>}{formatDate(name.updatedAt)}</p>
       </div>
-      <span>
-        <button onClick={handleDelete} className='button'>Remove Students Details</button>
-        <Link to={`/update-task/${id}`}>
-          <button className='button'>Update Students Details</button>
-        </Link>
-      </span>
+      <div className="action-buttons">
+  <button onClick={handleDelete} className="button delete-btn">
+    Remove Students Details
+  </button>
+
+  <Link to={`/update-task/${id}`}>
+    <button className="button update-btn">
+      Update Students Details
+    </button>
+  </Link>
+</div>
+
     </div>
   )
 }

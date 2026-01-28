@@ -30,7 +30,7 @@ const CreateTasks = () => {
   return (
     <div className="create-task-container">
       <h2 className="heading">Add a new Students</h2>
-      <div className="heading-divider"></div><br />
+      <div className="create-task-heading-divider"></div><br />
       <form onSubmit={handleSubmit}  className="content">
         <label>Name: </label>
         <input 

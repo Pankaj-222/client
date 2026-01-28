@@ -1,39 +1,50 @@
-import React from 'react'
-import './Navbar.css'
-import logo_light from '../assets/logo-white.png'
-import logo_dark from '../assets/logo-black.png'
-import search_icon_light from '../assets/search-w.png'
-import search_icon_dark from '../assets/search-b.png'
-import toggle_light from '../assets/night.png'
-import toggle_dark from '../assets/day.png'
+import { useState } from "react";
+import "./Navbar.css";
+// import logo from "../assets/logo-black.png";
+import toggle_light from "../assets/night.png";
+import toggle_dark from "../assets/day.png";
+import logo_light from "../assets/logo-white.png";
+import logo_dark from "../assets/logo-black.png";
 
-const Navbar = ({theme, setTheme}) => {
-
-    const toggle_mode = () => {
-        theme == 'light' ? setTheme('dark') : setTheme('light');
-    }
+const Navbar = ({ theme, setTheme }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className='navbar'>
+    <nav className="navbar">
+      <div className="logo-wrapper">
+        <img
+            src={theme === "dark" ? logo_light : logo_dark}
+            className="logo"
+            alt="Eduford"
+        />
+        <span className="logo-tooltip">Logo</span>
+      </div>
 
-        <img src={theme == 'light' ? logo_dark : logo_light} alt="Logo" className='logo' />
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <a href="/">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
 
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-
+      <div className="nav-right">
         <div className="search-box">
-            <input type="text" placeholder='Search' />
-            <img src={theme == 'light' ? search_icon_light : search_icon_dark} alt="" />
+          <input type="text" placeholder="Search" />
+          <span>🔍</span>
         </div>
 
-        <img onClick={()=>{toggle_mode()}} src={theme == 'light' ? toggle_light : toggle_dark} alt="" className='toggle-icon' />
+        <img
+          src={theme === "light" ? toggle_light : toggle_dark}
+          className="toggle-icon"
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        />
 
-    </div>
-  )
-}
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;

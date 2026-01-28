@@ -25,27 +25,26 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 >
-            Follow Us On
-          </h2>
-          <ul >
-            <li>
-              <FaFacebookF />{" "}<br/>
-              <a href="/facebook">Facebook</a>
-            </li>
-            <li>
-              <FaTwitter />{" "}<br/>
-              <a href="/twitter">Twitter</a>
-            </li>
-            <li>
-              <FaInstagram />{" "}<br/>
-              <a href="/instagram">Instagram</a>
-            </li>
-          </ul>
+            <h2>Follow Us On</h2>
+  <ul className="social-links">
+    <li>
+      <FaTwitter />
+      <span>Twitter</span>
+    </li>
+    <li>
+      <FaFacebookF />
+      <span>Facebook</span>
+    </li>
+    <li>
+      <FaInstagram />
+      <span>Instagram</span>
+    </li>
+  </ul>
         </div>
       </div><hr /><br />
-      <div>
-        <p>&copy; Copyright 2026 Pankaj. All rights reserved.</p>
+      <div className='foot'>
+        <p>&copy; Copyright 2026. All rights reserved.</p>
+        <p>Made by Pankaj</p>
       </div>
     </footer>
   )

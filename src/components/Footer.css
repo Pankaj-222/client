@@ -1,70 +1,101 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
 footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 0px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-footer ul li a:hover {
-    color: #ff6347;
-}
-
-footer h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-footer .social-icons {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-footer .social-icons a:hover {
-    color: #ff6347;
+  background: #0f172a;
+  color: #fff;
+  padding: 40px 20px 20px;
 }
 
 .footer-sections {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: center;
 }
 
-.footer-links {
-    display: block;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
+/* Headings */
+footer h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+/* Paragraph & links */
+footer p {
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+footer a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #60a5fa;
+}
+
+/* Quick links */
+.quick-links {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin: 6px 0;
+}
+
+/* 🔥 FOLLOW US FIX */
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.social-links li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #e5e7eb;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links li svg {
+  font-size: 20px;
+}
+
+.social-links li span {
+  font-size: 13px;
+}
+
+/* Hover effect */
+.social-links li:hover {
+  transform: translateY(-4px);
+  color: #60a5fa;
+}
+
+/* Divider */
+footer hr {
+  margin: 30px 0 15px;
+  border: 1px solid #334155;
+}
+
+/* Copyright */
+footer .copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .social-links {
+    gap: 25px;
+  }
+}
+
+.foot {
+  text-align: center;
 }
